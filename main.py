@@ -17,10 +17,8 @@ def main():
 
         other_nums_length = PHONE_NUMBER_LENGTH - len(code)
 
-        other_nums_step = 1
         getcontext().prec = other_nums_length
-        for i in range(other_nums_length):
-            other_nums_step = Decimal(other_nums_step / 10)
+        other_nums_step = Decimal(1 / (10**other_nums_length))
 
         other_nums = other_nums_step
         while other_nums < 1:
